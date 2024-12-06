@@ -5,6 +5,7 @@ import { Header } from "../components/Header";
 import ProductList from "../components/ProductList";
 import { Product } from "../types";
 import { fetchProducts } from "../service/apiService";
+import { ProductSearch } from "../components/ProductSearch";
 
 const filterProductsByQuery = (products: Product[], query: string): Product[] => {
     if (!query) return products; 
@@ -34,7 +35,9 @@ const Home: React.FC = () => {
   
     return(
         <IonPage>
-            <Header/>
+            <Header>
+                <ProductSearch searchQuery={searchQuery} onSearchChange={setSearchQuery}/>
+            </Header>
             <IonContent fullscreen>
                 <ProductList products={filteredProducts}/>
             </IonContent>

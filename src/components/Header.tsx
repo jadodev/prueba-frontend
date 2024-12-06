@@ -1,11 +1,11 @@
 import { IonHeader, IonRouterLink, IonToolbar } from "@ionic/react";
-import React from "react";
+import React, { Children } from "react";
 import { useHistory } from "react-router";
 import { useLocation } from "react-router";
 import { Logo } from "./common/Logo";
 import { Cart } from "./common/Cart";
 
-export const Header: React.FC= () => {
+export const Header: React.FC<{ children: React.ReactNode }> = ({children}) => {
 
     const history = useHistory();
     const location = useLocation();
@@ -31,6 +31,7 @@ export const Header: React.FC= () => {
           <IonRouterLink href="/" onClick={handleLogoClick}>
             <Logo />
           </IonRouterLink>
+          {children}
           <IonRouterLink href="/favorites" onClick={handleCartClick}>
             <Cart />
           </IonRouterLink>
