@@ -1,0 +1,263 @@
+[
+    {
+        "_id": 1,
+        "titulo": "Apple Watch",
+        "precio": 2000000,
+        "descripcion": "El nuevo Apple Watch combina un diseño elegante con tecnología avanzada, ofreciendo monitoreo de salud, notificaciones inteligentes y una experiencia personalizada.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_646803-MLA72126235375_102023-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_646803-MLA72126235375_102023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_833357-MLA72066678278_102023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_956036-MLA72126000741_102023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_876753-MLA72126235857_102023-O.webp"
+        ]
+    },
+    {
+        "_id": 2,
+        "titulo": "Sofá Minimalista Moderno",
+        "precio": 100000,
+        "descripcion": "Un sofá minimalista moderno en tonos madera y gris, perfecto para interiores contemporáneos.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_689550-MCO78468954243_082024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_689550-MCO78468954243_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_949515-MCO78468954233_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_838198-MCO78468954239_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_831547-MCO78468954231_082024-O.webp"
+        ]
+    },
+   
+    {
+        "_id": 3,
+        "titulo": "TV de 75'",
+        "precio": 4000000,
+        "descripcion": "Una TV compacta de 30 pulgadas con tecnología de vanguardia, excelente calidad de imagen y sonido para tu entretenimiento diario.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_607599-MLU74275302697_012024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_607599-MLU74275302697_012024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_778481-MLU74275397769_012024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_844817-MLU74163771046_012024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_815338-MLU74275302711_012024-O.webp"
+        ]
+    },
+    {
+        "_id": 4,
+        "titulo": "Patinete eléctrico",
+        "precio": 6000000,
+        "descripcion": "El patinete eléctrico revoluciona la movilidad urbana con su diseño ligero, batería de larga duración y velocidad ajustable.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_652757-MCO70217917495_062023-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_682436-MCO70195854012_062023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_667177-MCO70196285228_062023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_876251-MCO70196198034_062023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_652757-MCO70217917495_062023-O.webp"
+        ]
+    },
+    {
+        "_id": 5,
+        "titulo": "Samsung Frame TV",
+        "precio": 4000000,
+        "descripcion": "El Samsung Frame TV 4K se transforma en un marco decorativo cuando está apagado, lo que lo hace perfecto para hogares modernos.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_894337-MLU76279545311_052024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_741966-MLU76095308402_052024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_988181-MCO78192895854_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_865357-MCO78192846726_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_742170-MCO78192846730_082024-O.webp"
+        ]
+    },
+    {
+        "_id": 6,
+        "titulo": "Auriculares gamer",
+        "precio": 190000,
+        "descripcion": "Auriculares gamer diseñados para largas sesiones, con un micrófono de alta calidad y compatibilidad con múltiples plataformas.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_868007-MLA52218665195_102022-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_868007-MLA52218665195_102022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_622554-MLA54908877703_042023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_914108-MLA54908815837_042023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_753360-MLA48860290097_012022-O.webp"
+        ]
+    },
+    {
+        "_id": 7,
+        "titulo": "Samsung Galaxy S23",
+        "precio": 3799000,
+        "descripcion": "El Samsung Galaxy S23 cuenta con una cámara de próxima generación, capacidades profesionales de fotografía y un rendimiento inigualable con el procesador Snapdragon 8 Gen 2.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_656379-MLU74071993014_012024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_884469-MLU74021395182_012024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_810569-MLU74072997256_012024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_627904-MLU74035766152_012024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_671673-MLU74110326281_012024-O.webp"
+        ]
+    },
+    {
+        "_id": 8,
+        "titulo": "Monitor Curvo Gamer",
+        "precio": 800900,
+        "descripcion": "El monitor ultrapanorámico curvo MOBIUZ 1000R ofrece una experiencia inmersiva, ideal tanto para juegos competitivos como para creación de contenido.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_827699-MLU74975109969_032024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_827699-MLU74975109969_032024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_819917-MLA52221642729_102022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_793300-MLA73952933186_012024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_671555-MLA53044213157_122022-O.webp"
+        ]
+    },
+    {
+        "_id": 9,
+        "titulo": "New balance 530",
+        "precio": 259000,
+        "descripcion": "Nike Dunk Low SE 85 en beige y marrón, con un diseño estiloso inspirado en la estética vintage.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_697430-MCO79672059191_092024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_697430-MCO79672059191_092024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_600099-CBT80046774004_102024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_981736-MCO80023115884_102024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_927327-CBT80046774010_102024-O.webp"
+        ]
+    },
+    {
+        "_id": 10,
+        "titulo": "Laptop HP",
+        "precio": 1040000,
+        "descripcion": "Laptop HP CE con 8GB de RAM, 256GB de SSD y una pantalla de 14 pulgadas, perfecta para trabajo y estudio.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_685593-MLU77168198195_062024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_685593-MLU77168198195_062024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_926819-MLU77168246479_062024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_809759-MLM49194247836_022022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_665503-MLU69851896963_062023-O.webp"
+        ]
+    },
+    {
+        "_id": 11,
+        "titulo": "Iphone 15",
+        "precio": 3000000,
+        "descripcion": "El iPhone 15 de Apple viene con el último chip A16 Bionic y un nuevo diseño impresionante'.",
+        "imagen": "https://http2.mlstatic.com/D_Q_NP_891263-MLA71783089058_092023-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_Q_NP_891263-MLA71783089058_092023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_966883-MLA71835504613_092023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_643232-MLA71835514033_092023-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_635717-MLA71835621637_092023-O.webp"
+        ]
+    },
+    {
+        "_id": 12,
+        "titulo": "Computador gaming ",
+        "precio": 2200000,
+        "descripcion": "Elites de PC para juegos con tecnología NVIDIA RTX 4090 y 32 GB de RAM, que ofrecen un alto rendimiento para experiencias de juego inmersivas.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_843620-MCO49305457470_032022-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_843620-MCO49305457470_032022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_882032-MCO49233084304_022022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_2X_679278-MPE80148142453_102024-T.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_2X_944318-MLU69362245513_052023-T.webp"
+        ]
+    },
+    {
+        "_id": 13,
+        "titulo": "Mouse rosa mujer",
+        "precio": 24000,
+        "descripcion": "Ratón gamer rosa recargable e inalámbrico con seis botones y diseño ergonómico para cómodas sesiones de juego.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_766491-MLU75113507061_032024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_766491-MLU75113507061_032024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_918702-MLA50909035086_072022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_762380-MLA50908899444_072022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_776012-MCO51458789218_092022-O.webp"
+        ]
+    },
+    {
+        "_id": 14,
+        "titulo": "Lampara minimalista",
+        "precio": 18000,
+        "descripcion": "Una lámpara de madera minimalista con brillo regulable y luz cálida, ideal para leer o como pieza decorativa.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_749639-MCO46688752943_072021-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_749639-MCO46688752943_072021-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_742408-MCO46688752946_072021-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_978556-MCO46688752945_072021-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_866363-MCO46688752944_072021-O.webp"
+        ]
+    },
+    {
+        "_id": 15,
+        "titulo": "Women's Adidas Sneakers",
+        "precio": 55000,
+        "descripcion": "Zapatillas Adidas de mujer de moda, perfectas para el día a día o para sesiones de entrenamiento ligeras.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_910255-MCO76346375319_052024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_910255-MCO76346375319_052024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_824497-MCO76346375313_052024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_708359-MCO76674337243_052024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_984609-MCO76346375301_052024-O.webp"
+            ]
+    },
+    {
+        "_id": 16,
+        "titulo": "Reloj de pulsera elegante",
+        "precio": 150000,
+        "descripcion": "RUn elegante reloj de pulsera con correa de piel, caja de acero inoxidable y diseño resistente al agua.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_655652-MCO74573631796_022024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_655652-MCO74573631796_022024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_715106-MCO74573492926_022024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_822675-MCO74573612438_022024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_899487-MCO74701377529_022024-O.webp"
+        ]
+    },
+    {
+        "_id": 17,
+        "titulo": "Escritorio minimalista",
+        "precio": 500000,
+        "descripcion": "Escritorio minimalista moderno con tapa de madera y estructura de metal, ideal para oficinas en casa o espacios de estudio.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_893731-MCO78258061115_082024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_893731-MCO78258061115_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_664652-MCO78258021839_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_992018-MCO78258022245_082024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_723530-MCO78258022221_082024-O.webp"
+        ]
+    },
+    {
+        "_id": 18,
+        "titulo": "Altavoz Bluetooth",
+        "precio": 850000,
+        "descripcion": "Cámara digital con lente de alta calidad y zoom óptico, ideal para fotografía profesional.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_707134-MLU77623129149_072024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_707134-MLU77623129149_072024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_613272-MCO32036213001_092019-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_957338-MCO32036317509_092019-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_885529-MCO31552977556_072019-O.webp"
+        ]
+    },
+    {
+        "_id": 19,
+        "titulo": "Smart Fitness ",
+        "precio": 2500000,
+        "descripcion": "Un rastreador de actividad física inteligente con monitor de frecuencia cardíaca, seguimiento del sueño y compatibilidad con Android e iOS",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_707134-MLU77623129149_072024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_707134-MLU77623129149_072024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_613272-MCO32036213001_092019-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_957338-MCO32036317509_092019-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_885529-MCO31552977556_072019-O.webp"
+        ]
+    },
+    {
+        "_id": 20,
+        "titulo": "Silla ergonómica",
+        "precio": 4000000,
+        "descripcion": "Una silla ergonómica con respaldo alto, soporte lumbar, altura ajustable y respaldo de malla transpirable",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_778910-MLA79920087553_102024-O.webp",
+        "imagenes": [
+            "https://http2.mlstatic.com/D_NQ_NP_778910-MLA79920087553_102024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_858327-MLA79920235361_102024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_662252-MCO77741334289_072024-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_622118-MCO77741334281_072024-O.webp"
+        ]
+    }
+]
