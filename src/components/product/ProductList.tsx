@@ -1,6 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Product } from '../types';
+import { Heart } from '../common/Heart';
+import { ImageWithSkeleton } from './ImageWithSkeleton';
+import { Product } from '../../types';
+import { useCart } from '../../hooks/useCart';
 
 interface ProductListProps {
   products: Product[];
@@ -14,9 +17,10 @@ const formatPrice = (price: number): string => {
 };
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
+  const { addProduct, removeProduct, getProductCount } = useCart();
   const history = useHistory();
 
-  const handleClick = (productId: number) => {
+  const handleClick = (productId: number) => ( event: React.MouseEvent<HTMLDivElement, MouseEvent> ) => {
     history.push(`/product-info/${productId}`);
   };
 
@@ -26,9 +30,16 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
         <div
           key={product._id.toString()}
           className="relative lg:w-[500px] cursor-pointer flex flex-col items-center border p-4 rounded-lg shadow-lg md:shadow-xs md:border-none"
+          onClick={() => addProduct(product)}
         >
-        
-          <img src={product.imagen} alt={product.titulo} />
+          <Heart 
+            product={product}
+            removeProduct={removeProduct}
+            addProduct={addProduct}
+          />
+          <div onClick={handleClick(product._id)}>
+            <ImageWithSkeleton src={product.imagen} alt={product.titulo}/>
+          </div>
           <h3 className="mt-4 md:text-xl font-semibold text-center">{product.titulo}</h3>
           <p className="font-medium">{formatPrice(Number(product.precio))}</p>
         </div>

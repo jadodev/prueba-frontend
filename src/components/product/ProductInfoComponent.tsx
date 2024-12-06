@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { fetchProducts } from "../service/apiService";
-import { Header } from "./Header";
+import { fetchProducts } from "../../service/apiService";
+import { Header } from "../Header";
 import { ProductDetails } from "./ProductDetails";
-import { Product } from "../types";
+import { Product } from "../../types";
 import { image } from "ionicons/icons";
 
 const ProductInfoComponent: React.FC = () => {

@@ -6,7 +6,7 @@ interface SearchProps {
   onSearchChange: (query: string) => void;
 }
 
-export const ProductSearch: React.FC<SearchProps> = ({ searchQuery, onSearchChange }) => {
+export const Search: React.FC<SearchProps> = ({ searchQuery, onSearchChange }) => {
 
   return (
     <div className="md:w-[500px] md:h-12 ">

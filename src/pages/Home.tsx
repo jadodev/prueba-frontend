@@ -2,10 +2,10 @@ import React from "react";
 import { useEffect, useState, useMemo } from "react";
 import { IonContent, IonPage } from "@ionic/react";
 import { Header } from "../components/Header";
-import ProductList from "../components/ProductList";
+import ProductList from "../components/product/ProductList";
 import { Product } from "../types";
 import { fetchProducts } from "../service/apiService";
-import { ProductSearch } from "../components/ProductSearch";
+import { Search } from "../components/common/Search";
 
 const filterProductsByQuery = (products: Product[], query: string): Product[] => {
     if (!query) return products; 
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
     return(
         <IonPage>
             <Header>
-                <ProductSearch searchQuery={searchQuery} onSearchChange={setSearchQuery}/>
+                <Search searchQuery={searchQuery} onSearchChange={setSearchQuery}/>
             </Header>
             <IonContent fullscreen>
                 <ProductList products={filteredProducts}/>

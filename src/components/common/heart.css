@@ -1,0 +1,62 @@
+.heart-container {
+  display: flex;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  flex-direction: column; /* Apila el corazón y el número verticalmente */
+  justify-content: center;
+  align-items: center;  
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  z-index: 20;
+}
+
+/* Estilo base del corazón */
+.heart {
+  width: 100px;
+  height: 100px;
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Transición para el color rojo activado */
+}
+
+/* Mantiene el color rojo activado */
+.heart.liked {
+  background-position: -2800px 0;
+}
+
+/* Animación del corazón (fotogramas) */
+.heart.active {
+  animation: fave-heart 1s steps(28) forwards;
+}
+
+/* Número debajo del corazón */
+.number {
+  position: absolute;
+  margin-top: 50px; /* Separación respecto al corazón */
+  font-size: 20px;
+  color: red;
+  transition: transform 1s ease, font-size 1s ease, margin-top 200ms; /* Suaviza el crecimiento */
+}
+
+/* Animación del número */
+.number.active {
+  transform: scale(1.5); /* Aumenta el tamaño */
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: -60px;
+  color: red;
+}
+
+/* Keyframes de animación del corazón */
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}

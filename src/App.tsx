@@ -5,11 +5,13 @@ import ProductInfo from './pages/ProductInfo';
 import Home from './pages/Home';
 
 import '@ionic/react/css/core.css';
+import { CartProvider } from './context/CartContext';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+    <CartProvider>
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/home" component={Home}>
@@ -24,6 +26,7 @@ const App: React.FC = () => (
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
+    </CartProvider>
   </IonApp>
 );
 

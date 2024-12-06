@@ -1,6 +1,6 @@
 import React from "react"
 import { IonContent, IonPage } from "@ionic/react"
-import ProductInfoComponent from "../components/ProductInfoComponent"
+import ProductInfoComponent from "../components/product/ProductInfoComponent"
 
 const ProductInfo: React.FC = ( ) => {
   return(
