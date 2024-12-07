@@ -3,10 +3,11 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import ProductInfo from './pages/ProductInfo';
 import Home from './pages/Home';
-
-import '@ionic/react/css/core.css';
 import { CartProvider } from './context/CartContext';
 import Checkout from './pages/Checkout';
+import PageNotFount from './pages/PageNotFound';
+
+import '@ionic/react/css/core.css';
 
 setupIonicReact();
 
@@ -29,6 +30,9 @@ const App: React.FC = () => (
         />
         <Route exact path="/">
           <Redirect to="/home" />
+        </Route>
+        <Route >
+          <PageNotFount/>
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

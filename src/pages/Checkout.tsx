@@ -20,13 +20,13 @@ const Checkout: React.FC = () => {
           <ButtonBack />
         </section>
         <div className="flex flex-col items-center gap-8 p-8 md:flex-row md:items-start xl:w-3/4 md:mx-auto">
-          <div className="flex flex-col items-center gap-8 w-full md:w-2/3">
+          <div className="flex flex-col items-center gap-4 w-full md:w-2/3">
             {cartItems.map((product) => (
               <CartItem key={product._id} product={product} />
             ))}
           </div>
-          <div className="w-full md:w-1/3 flex justify-center ml-2">
-            <DetailsShopping />
+          <div className="w-full md:w-1/3 flex justify-center sm:ml-8">
+            <DetailsShopping/>
           </div>
         </div>
       </IonContent>

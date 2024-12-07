@@ -45,6 +45,7 @@ interface CartContextProps {
   addProduct: (product: Product) => void;
   removeProduct: (id: number) => void;
   getProductCount: () => number;
+  getTotalPrice: () => number;
 }
 
 export const CartContext = createContext<CartContextProps | undefined>(undefined);
@@ -73,11 +74,17 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     return Object.keys(cart).length;
   };
 
+  const getTotalPrice = () => {
+    return Object.values(cart).reduce((total, item) => {
+      return total + (item.precio * item.cantidad);
+    }, 0)
+  }
+
   useEffect(() => {
       localStorage.setItem('cart', JSON.stringify(cart)); 
   }, [cart]); 
   return (
-    <CartContext.Provider value={{ cart, addProduct, removeProduct, getProductCount }}>
+    <CartContext.Provider value={{ cart, addProduct, removeProduct, getProductCount, getTotalPrice }}>
       {children}
     </CartContext.Provider>
   );

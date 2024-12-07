@@ -4,7 +4,7 @@ import { cart } from "ionicons/icons";
 import { useCart } from "../../hooks/useCart";
 
 export const Cart: React.FC = () => {
-  const { cart: cartList, getProductCount } = useCart();
+  const { getProductCount } = useCart();
 
   return (
     <div className="flex items-center rounded-full w-8 md:w-16 h-8 md:h-16 justify-center relative">
