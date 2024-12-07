@@ -1,68 +1,62 @@
-/* Ajusta el alto del slider */
 .swiper {
-    width: 100%;
-    height: 50%; /* Altura fija del slider */
-    position: relative;
-  }
-  
-  /* Configura las slides */
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Contenedor de la imagen y texto */
-  .slide-content {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  /* Estilos para la imagen */
-  .swiper-slide img {
-    width: 100%;
-    height: 100%; /* Imagen ocupa el 70% del alto */
-    object-fit: cover; /* La imagen se adapta sin deformarse */
-    border-radius: 10px 10px 0 0;
-  }
-  
-  /* Contenedor de texto */
-  .text-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px; /* Espaciado entre textos */
-  }
-  
-  /* Estilos del texto */
-  .product-title {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #333;
-  }
-  
-  .product-description {
-    font-size: 0.9em;
-    color: #666;
-  }
-  
-  .product-price {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #007bff;
-  }
-  
+  width: 100%;
+  height: 50%;
+  position: relative;
+  margin-top: 16px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 10px 10px 0 0;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-title {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.product-price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #007bff;
+}

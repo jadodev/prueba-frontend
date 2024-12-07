@@ -6,27 +6,27 @@ import { CartItem } from "../components/cart/CartItem";
 import { useCart } from "../hooks/useCart";
 import { DetailsShopping } from "../components/cart/DetaillShopping";
 
-const Checkout: React.FC = () => {
+const Favorite: React.FC = () => {
   const { cart } = useCart();
   const cartItems = Object.values(cart);
 
   return (
     <IonPage>
       <Header>
-        <p className="text-lg">Ya casi es tuyo!</p>
+        <h3 className="text-white">Ya casi es tuyo!</h3>
       </Header>
       <IonContent fullscreen>
         <section className="mt-4 md:mt-8 ml-4 md:ml-8">
           <ButtonBack />
         </section>
-        <div className="flex flex-col items-center gap-8 p-8 md:flex-row md:items-start xl:w-3/4 md:mx-auto">
-          <div className="flex flex-col items-center gap-4 w-full md:w-2/3">
+        <div className="flex flex-col items-center gap-8 p-8 md:flex-row md:justify-around md:items-start">
+          <div className="flex flex-col items-center gap-8 w-full md:w-2/3">
             {cartItems.map((product) => (
               <CartItem key={product._id} product={product} />
             ))}
           </div>
-          <div className="w-full md:w-1/3 flex justify-center sm:ml-8">
-            <DetailsShopping/>
+          <div className="w-full md:w-1/3 flex justify-center">
+            <DetailsShopping />
           </div>
         </div>
       </IonContent>
@@ -34,4 +34,4 @@ const Checkout: React.FC = () => {
   );
 };
 
-export default Checkout;
+export default Favorite;

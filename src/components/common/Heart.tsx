@@ -1,32 +1,29 @@
 import React, { useState } from 'react';
-import { Product } from "../../types";
-import './heart.css';
+import './heart.css'; 
 
 type HeartProps = {
-  product: Product;
-  addProduct: (product: Product) => void;
-  removeProduct: (id: number) => void; 
+  active: () => void; 
+  unactive: () => void; 
 };
 
-export const Heart: React.FC<HeartProps> = ({ product, addProduct, removeProduct }) => {
-  const [isLiked, setIsLiked] = useState(false);
+export const Heart: React.FC<HeartProps> = ({ active, unactive }) => {
+  const [isLiked, setIsLiked] = useState(false); 
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = () => {
     if (isLiked) {
-      console.log("Removed")
-      removeProduct(product._id); 
+      unactive(); 
       setIsLiked(false);
     } else {
-      addProduct(product);
-      setIsLiked(true);
-      setIsAnimating(true);
-      setTimeout(() => setIsAnimating(false), 1000);
+      active(); 
+      setIsLiked(true); 
+      setIsAnimating(true); 
+      setTimeout(() => setIsAnimating(false), 1000); 
     }
   };
 
   return (
-    <div className="heart-container" onClick={handleClick}>
+    <div className="heart-container" onClick={e=> {e.stopPropagation(); handleClick()}}>
       <div
         className={`heart ${isLiked ? 'liked' : ''} ${isAnimating ? 'active' : ''}`}
       ></div>

@@ -32,13 +32,13 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative flex justify-around items-center w-full max-w-screen-lg mx-auto">
+    <div className=" flex items-center w-full ">
       <button onClick={prevImage} className="carousel-btn">
         &#8592;
       </button>
-      <div className="relative h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden lg:h-[600px]">
+      <div className="relative h-[300px] sm:h-[400px] overflow-hidden lg:h-[600px]">
         <div
-          className={`w-[300px] xl:w-[800px] h-full flex transition-transform duration-500 ease-in-out mx-auto`}
+          className={`w-[300px] xl:w-[800px] flex transition-transform duration-500 ease-in-out mx-auto bg-light-gray`}
           style={{
             transform: `translateX(-${currentImageIndex * 100}%)`,
           }}
@@ -47,12 +47,12 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="aspect-w-10 aspect-h-9 w-[285px] md:w-[300px] xl:w-[800px] flex-shrink-0"
+              className="w-[285px] xl:w-[800px] flex-shrink-0"
             >
               <img
                 src={image}
                 alt={`Imagen del producto ${index + 1}`}
-                className="w-full h-full"
+                className="bg-light-gray"
                 loading="lazy"
               />
             </div>

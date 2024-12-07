@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { CartItem as ICartItem, Product } from "../../types";
 import { useCart } from "../../hooks/useCart";
 import { AddQuantity } from "./ButtonAddQuantity";
+import { IonButton } from "@ionic/react";
+import { IonIcon } from "@ionic/react";
+import { closeOutline } from "ionicons/icons";
 
 interface CartItemProps {
   product: ICartItem;
@@ -11,6 +14,7 @@ interface CartItemProps {
 export const CartItem: React.FC<CartItemProps> = ({ product, fallbackSrc }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [isRemoving, setIsRemoving] = useState(false); 
   const { removeProduct, addProduct, decreaseProductQuantity } = useCart();
 
   const handleLoad = () => {
@@ -33,17 +37,28 @@ export const CartItem: React.FC<CartItemProps> = ({ product, fallbackSrc }) => {
   }
 
   return (
-    <div className="relative flex items-center gap-7 rounded-md border-gray-200 bg-gray-100 py-2 px-4 w-full md:w-full">
+    <div
+      className={`relative flex items-center gap-7 rounded-md border-gray-200 bg-light-gray py-2 px-4 w-full md:w-full transition-all duration-300 ease-in-out ${
+        isRemoving ? "opacity-0 translate-x-10" : "" 
+      }`}
+    >
       <button
-        className="absolute top-2 right-2 border md:bg-gray-300/50 bg-gray-400 w-8 h-8 rounded-full hover:bg-red-500 flex items-center justify-center"
-        onClick={() => removeProduct(product._id)}
+        className="absolute top-2 right-2 border md:bg-gray-300/50 bg-light-gray w-8 h-8 rounded-full hover:bg-red-500 flex items-center justify-center"
         aria-label={`Eliminar ${product.titulo} de favoritos`}
       >
-        <span className="font-bold text-lg">x</span>
+        <IonButton 
+          fill="clear"
+          onClick={()=>removeProduct(product._id)}
+          >
+            <IonIcon icon={closeOutline}/>
+      </IonButton>
       </button>
+
+      
+    
       <div className="relative w-[300px] h-[150px] md:w-[300px] md:h-[200px]">
         {!isLoaded && !hasError && (
-          <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></div>
+          <div className="absolute inset-0 bg-light-gray animate-pulse rounded-lg"></div>
         )}
         <img
           src={hasError && fallbackSrc ? fallbackSrc : product.imagen}
@@ -67,6 +82,7 @@ export const CartItem: React.FC<CartItemProps> = ({ product, fallbackSrc }) => {
           Guardado en:{" "}
           {product.savedAt ? new Date(product.savedAt).toLocaleString() : "Fecha no disponible"}
         </p>
+
         <AddQuantity 
           count={product.cantidad}
           increase={()=> increaseProduct(product)}

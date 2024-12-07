@@ -40,9 +40,9 @@ const Home: React.FC = () => {
           <Search searchQuery={searchQuery} onSearchChange={setSearchQuery} />
         </Header>
         <IonContent fullscreen>
-          <h3 className='p-4'>Productos populares</h3>
           <ProductSlider/>
-          <h3 className='p-4'>Para ti ❤</h3>
+          <hr/>
+          <h3 className='px-4 font-thin'>Pensados en ti</h3>
           <ProductList products={filteredProducts}/>
         </IonContent>
       </IonPage>

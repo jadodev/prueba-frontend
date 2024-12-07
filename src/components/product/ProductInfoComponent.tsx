@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { fetchProducts } from "../../service/apiService";
 import { Header } from "../layout/Header";
+import { ButtonBack } from "../common/ButtonBack";
+import { Skeleton } from "../common/Skeleton";
+import { ImageCarousel } from "../ui/ImageCarrousel";
 import { ProductDetails } from "./ProductDetails";
 import { Product } from "../../types";
-import { ImageCarousel } from "../ui/ImageCarrousel";
-import { Skeleton } from "../common/Skeleton";
-import { ButtonBack } from "../common/ButtonBack";
 
 const ProductInfoComponent: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -45,15 +45,15 @@ const ProductInfoComponent: React.FC = () => {
 
   return (
     <section>
-        <Header children={undefined}/>
-        <div className="fixed mt-4 md:mt-8 ml-4 md:ml-8">
+      <Header children={undefined} />
+        <div className="fixed mt-4 ml-4">
           <ButtonBack />
         </div>
-        <div className="md:relative md:h-full pt-4 top-0 p-4 flex flex-col justify-center items-center gap-x-16 md:w-3/4 md:mx-auto bg-gray-100/40 mt-4 md:mt-0">
+        <div className=" md:w-auto md:h-[100px]">
           {product ? (
-            <div className="pt-8 md:w-9/12 w-full flex flex-col gap-y-10">
+            <div className="flex items-center bg-light-gray">
               <ImageCarousel images={product.imagenes ?? []} />
-              <ProductDetails product={product} productId={Number(productId)} />
+              <ProductDetails product={product} productId={productId} />
             </div>
           ) : (
             <div>Producto no encontrado</div>

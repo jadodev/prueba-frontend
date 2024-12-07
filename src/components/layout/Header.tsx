@@ -1,12 +1,15 @@
-import { IonHeader, IonRouterLink, IonToolbar } from "@ionic/react";
-import React from "react";
-import { useHistory } from "react-router";
-import { useLocation } from "react-router";
+import React, { ReactNode } from "react";
+import { IonHeader, IonToolbar, IonRouterLink } from "@ionic/react";
+import { useHistory, useLocation } from "react-router-dom";
 import { Logo } from "../common/Logo";
 import { Cart } from "../cart/Cart";
+import '../../theme/variables.css'
 
-export const Header: React.FC<{ children: React.ReactNode }> = ({children}) => {
-
+interface HeaderProps {
+  children: ReactNode;
+}
+export const Header: React.FC<HeaderProps> = ({children}) => {
+    
     const history = useHistory();
     const location = useLocation();
   
@@ -23,13 +26,12 @@ export const Header: React.FC<{ children: React.ReactNode }> = ({children}) => {
       }
       e.preventDefault(); 
     }
-
-    return(
+  return (
     <IonHeader>
-      <IonToolbar className="md:h-[100px] h-[70px] flex justify-center">
-        <div className="flex justify-around xl:w-[1000px] md:h-16 md:ml-auto md:mr-auto items-center mt-3">
+      <IonToolbar className=" md:h-[100px] h-[70px] flex justify-center shadow-xl shadow-green-light/20 backdrop-blur-xl">
+        <div className="header flex justify-around xl:w-[1000px] md:h-16 md:ml-auto md:mr-auto items-center mt-3">
           <IonRouterLink href="/" onClick={handleLogoClick}>
-            <Logo />
+            <Logo/>
           </IonRouterLink>
           {children}
           <IonRouterLink href="/favorites" onClick={handleCartClick}>
@@ -38,5 +40,5 @@ export const Header: React.FC<{ children: React.ReactNode }> = ({children}) => {
         </div>
       </IonToolbar>
     </IonHeader>
-    )
-}
+  );
+};

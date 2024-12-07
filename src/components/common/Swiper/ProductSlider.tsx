@@ -50,7 +50,7 @@ useEffect(()=> { getProducts()}, [])
       {products?.map((product) => (
         <SwiperSlide key={product._id}>
           <div className="slide-content">
-            <img src={product.imagen} alt={`Imagen del producto: ${product.titulo}`}/>
+            <img src={product.imagen} alt={`Imagen del producto: ${product.titulo}`} />
           </div>
         </SwiperSlide>
       ))}

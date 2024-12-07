@@ -1,9 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { useCart } from '../../hooks/useCart';
 import { Heart } from '../common/Heart';
 import { ImageWithSkeleton } from '../ui/ImageWithSkeleton';
 import { Product } from '../../types';
-import { useCart } from '../../hooks/useCart';
 
 interface ProductListProps {
   products: Product[];
@@ -20,28 +20,33 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   const { addProduct, removeProduct } = useCart();
   const history = useHistory();
 
-  const handleClick = (productId: number) => ( event: React.MouseEvent<HTMLDivElement, MouseEvent> ) => {
+  const navigateToDetails = (productId: number) => {
     history.push(`/product-info/${productId}`);
   };
 
+  const remove = (idProduct: number) =>{
+    removeProduct(idProduct)
+  }
+
+  const increaseQuantity = (product: Product) => {
+    addProduct(product)
+  }
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 gap-8 p-4 lg:w-[1080px] ml-auto mr-auto mt-8">
+    <div className="grid grid-cols-2 md:grid-cols-2 gap-8 px-4 lg:w-[1080px] ml-auto mr-auto">
       {products.map((product) => (
         <div
           key={product._id.toString()}
-          className="relative lg:w-[500px] cursor-pointer flex flex-col items-center border p-4 rounded-lg shadow-lg md:shadow-xs md:border-none"
-          onClick={() => addProduct(product)}
+          onClick={()=> navigateToDetails(product._id)}
+          className="relative lg:w-[500px] cursor-pointer flex flex-col items-center border p-4 rounded-lg shadow-lg md:shadow-xs"
         >
           <Heart 
-            product={product}
-            removeProduct={removeProduct}
-            addProduct={addProduct}
+            unactive={()=> remove(product._id)}
+            active={()=> increaseQuantity(product)}
           />
-          <div onClick={handleClick(product._id)}>
-            <ImageWithSkeleton src={product.imagen} alt={product.titulo}/>
-          </div>
-          <h3 className="mt-4 md:text-xl font-semibold text-center">{product.titulo}</h3>
-          <p className="font-medium">{formatPrice(Number(product.precio))}</p>
+          <ImageWithSkeleton src={product.imagen} alt={product.titulo} />
+          <h5 className="mt-4 md:text-xl font-semibold text-center">{product.titulo}</h5>
+          <p className="font-medium text-dark-gray">{formatPrice(Number(product.precio))}</p>
         </div>
       ))}
     </div>

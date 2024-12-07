@@ -1,16 +1,14 @@
 .heart-container {
   display: flex;
   position: absolute;
-  right: 16px;
-  top: 16px;
-  flex-direction: column;
+  top: 20px;
+  right: 22px; 
+  align-items: center;
   justify-content: center;
-  align-items: center;  
-  background-color: white;
-  height: 100px;
-  width: 100px;
   border-radius: 100%;
+  flex-wrap: wrap;
   z-index: 20;
+  transform: translate(50%, -50%);
 }
 
 .heart {
@@ -19,7 +17,7 @@
   background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
   background-position: 0 0;
   cursor: pointer;
-  transition: background 0.3s ease; 
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .heart.liked {
@@ -28,22 +26,6 @@
 
 .heart.active {
   animation: fave-heart 1s steps(28) forwards;
-}
-
-.number {
-  position: absolute;
-  margin-top: 50px;
-  font-size: 20px;
-  color: red;
-  transition: transform 1s ease, font-size 1s ease, margin-top 200ms;
-}
-
-.number.active {
-  transform: scale(1.5);
-  font-size: 20px;
-  font-weight: bolder;
-  margin-top: -60px;
-  color: red;
 }
 
 @keyframes fave-heart {
