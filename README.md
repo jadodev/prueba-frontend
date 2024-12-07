@@ -1,4 +1,9 @@
 # prueba-tecnica-frontend
+
+![Mobile](prueba-tecnica/public/assets/prueba-mobile.mp4)
+
+![Navegador](prueba-tecnica/public/assets/prueba-navegador.mp4)
+
 ## Estructura del Proyecto
 
 ![Estructura](/public/assets/estructura.png)
@@ -57,7 +62,7 @@ Este proyecto es una aplicación de tienda en línea construida con **React** e 
 
 3. Inicia la aplicación:
     ```bash
-    ionic serve
+    pnpm start
     ```
 
 4. Para ejecutar en un dispositivo Android o en un emulador, primero añade la plataforma Android:
