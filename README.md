@@ -1,10 +1,12 @@
 # prueba-tecnica-frontend
 ## Estructura del Proyecto
 
+![Estructura](/public/assets/Captura de pantalla 2024-12-07 013729.png)
+
 Este proyecto es una aplicación de tienda en línea construida con **React** e **Ionic**. Permite a los usuarios buscar productos, ver detalles de los productos y gestionar su lista de favoritos. El proyecto sigue patrones de diseño para mejorar la escalabilidad y mantenibilidad del código.
 
 ### Descargar el APK
-[Descargar APK](https://drive.google.com/file/d/1nwn4TGG0bjshTzitWuTwwVDoVyuWXGDC/view?usp=drive_link)
+[Descargar APK]((https://drive.google.com/file/d/1i7J5ee3NPjOyfQNoQ7mgGyyEoZlvxVCK/view?usp=drive_link))
 ## Instrucciones para instalar la APK
 
 1. Descarga el archivo APK desde el enlace anterior.
