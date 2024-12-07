@@ -1,7 +1,5 @@
-# prueba-tecnica
-
 # prueba-tecnica-frontend
-# Proyecto de Tienda en Línea
+## Proyecto de Tienda en Línea
 
 ## Estructura del Proyecto
 
