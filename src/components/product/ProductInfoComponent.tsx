@@ -54,12 +54,11 @@ const ProductInfoComponent: React.FC = () => {
   </div>
   <div className="w-full h-full mt-4">
     {product ? (
-      <div className="flex flex-col md:flex-row items-center bg-light-gray h-[90vh]">
+      <div className="flex flex-col  items-center bg-light-gray h-[90vh]">
         <h2 className="text-2xl md:text-5xl font-semibold">{product.titulo}</h2>
         <div className="w-full md:w-1/2 h-full">
           <ImageCarousel images={product.imagenes ?? []} />
         </div>
-        {/* Product details */}
         <div className="w-full md:w-1/2 h-full flex flex-col justify-center p-4">
           <ProductDetails product={product} productId={productId} />
         </div>
