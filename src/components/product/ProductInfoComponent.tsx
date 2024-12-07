@@ -8,6 +8,7 @@ import { ImageCarousel } from "../ui/ImageCarrousel";
 import { ProductDetails } from "./ProductDetails";
 import { Product } from "../../types";
 
+
 const ProductInfoComponent: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
   const [product, setProduct] = useState<Product | null>(null);
@@ -44,22 +45,31 @@ const ProductInfoComponent: React.FC = () => {
   }
 
   return (
-    <section>
-      <Header children={undefined} />
-        <div className="fixed mt-4 ml-4">
-          <ButtonBack />
+    <>
+    <Header><p></p></Header>
+   
+  <section>
+  <div className="m-4">
+    <ButtonBack />
+  </div>
+  <div className="w-full h-full mt-4">
+    {product ? (
+      <div className="flex flex-col md:flex-row items-center bg-light-gray h-[90vh]">
+        <h2 className="text-2xl md:text-5xl font-semibold">{product.titulo}</h2>
+        <div className="w-full md:w-1/2 h-full">
+          <ImageCarousel images={product.imagenes ?? []} />
         </div>
-        <div className=" md:w-auto md:h-[100px]">
-          {product ? (
-            <div className="flex items-center bg-light-gray">
-              <ImageCarousel images={product.imagenes ?? []} />
-              <ProductDetails product={product} productId={productId} />
-            </div>
-          ) : (
-            <div>Producto no encontrado</div>
-          )}
+        {/* Product details */}
+        <div className="w-full md:w-1/2 h-full flex flex-col justify-center p-4">
+          <ProductDetails product={product} productId={productId} />
         </div>
-    </section>
+      </div>
+    ) : (
+      <div>Producto no encontrado</div>
+    )}
+  </div>
+</section>
+</>
   );
 };
 

@@ -42,7 +42,7 @@ const Home: React.FC = () => {
         <IonContent fullscreen>
           <ProductSlider/>
           <hr/>
-          <h3 className='px-4 font-thin'>Pensados en ti</h3>
+          <h3 className='px-4 font-thin'>Pensados para ti</h3>
           <ProductList products={filteredProducts}/>
         </IonContent>
       </IonPage>

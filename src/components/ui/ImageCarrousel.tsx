@@ -1,67 +1,59 @@
 import React, { useState } from "react";
-import "./carousel.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Thumbs, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 interface ImageCarouselProps {
-  images: string[];
+  images: string[] | undefined;
 }
 
 export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
-
-  const nextImage = () => {
-    if (!isTransitioning) {
-      setIsTransitioning(true);
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }
-  };
-
-  const prevImage = () => {
-    if (!isTransitioning) {
-      setIsTransitioning(true);
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === 0 ? images.length - 1 : prevIndex - 1
-      );
-    }
-  };
-
-  const handleTransitionEnd = () => {
-    setIsTransitioning(false);
-  };
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   return (
-    <div className=" flex items-center w-full ">
-      <button onClick={prevImage} className="carousel-btn">
-        &#8592;
-      </button>
-      <div className="relative h-[300px] sm:h-[400px] overflow-hidden lg:h-[600px]">
-        <div
-          className={`w-[300px] xl:w-[800px] flex transition-transform duration-500 ease-in-out mx-auto bg-light-gray`}
-          style={{
-            transform: `translateX(-${currentImageIndex * 100}%)`,
-          }}
-          onTransitionEnd={handleTransitionEnd}
-        >
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="w-[285px] xl:w-[800px] flex-shrink-0"
-            >
+    <div className="w-full">
+      <Swiper
+        modules={[Thumbs, Navigation]}
+        navigation
+        thumbs={{ swiper: thumbsSwiper }}
+        className="main-swiper w-full"
+      >
+        {images?.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex items-center justify-center w-full h-[50vh] sm:h-[70vh] lg:h-[50vh] overflow-hidden">
               <img
                 src={image}
                 alt={`Imagen del producto ${index + 1}`}
-                className="bg-light-gray"
+                className="object-contain max-w-full max-h-full"
                 loading="lazy"
               />
             </div>
-          ))}
-        </div>
-      </div>
-      <button onClick={nextImage} className="carousel-btn">
-        &#8594;
-      </button>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <Swiper
+        modules={[Thumbs]}
+        onSwiper={setThumbsSwiper}
+        slidesPerView={4}
+        spaceBetween={10}
+        watchSlidesProgress
+        className="thumbs-swiper w-full mt-2"
+      >
+        {images?.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex items-center justify-center w-full h-[100px] overflow-hidden">
+              <img
+                src={image}
+                alt={`Miniatura del producto ${index + 1}`}
+                className="object-cover max-w-full max-h-full rounded-md border border-gray-300 cursor-pointer transition-transform transform hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

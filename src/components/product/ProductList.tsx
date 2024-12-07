@@ -9,12 +9,6 @@ interface ProductListProps {
   products: Product[];
 }
 
-const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
-  }).format(price);
-};
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   const { addProduct, removeProduct } = useCart();
@@ -46,7 +40,16 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
           />
           <ImageWithSkeleton src={product.imagen} alt={product.titulo} />
           <h5 className="mt-4 md:text-xl font-semibold text-center">{product.titulo}</h5>
-          <p className="font-medium text-dark-gray">{formatPrice(Number(product.precio))}</p>
+          <p className="md:text-3xl font-medium text-center">
+            <span className="line-through text-gray-500 mr-2">${product.precio}</span>
+            <br></br>
+            <span className="text-green-light font-semibold">
+              {` ${4}% Descuento `}
+            </span>
+            <span className="font-medium">
+              ${(Number(product.precio) * 0.96).toLocaleString() }
+            </span>
+          </p>
         </div>
       ))}
     </div>

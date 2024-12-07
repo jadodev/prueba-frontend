@@ -1,2 +1,23 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+  
+  p, span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+
+  ion-toolbar {
+    --background: #A8D5BA !important;
+  }
+  :root {
+    --ion-color-primary: #4A90E2;
+  }
+  
