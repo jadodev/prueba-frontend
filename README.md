@@ -1,5 +1,6 @@
 # prueba-tecnica-frontend
 
+#### Videos de la funcionalidad de la app.
 ![Mobile](prueba-tecnica/public/assets/prueba-mobile.mp4)
 
 ![Navegador](prueba-tecnica/public/assets/prueba-navegador.mp4)
