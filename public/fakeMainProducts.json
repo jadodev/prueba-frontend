@@ -1,0 +1,58 @@
+[
+    {
+        "_id": 1,
+        "titulo": "¡Apple Watch, Innovación al Alcance!",
+        "descripcion": "Tu salud, estilo y tecnología en una sola mirada.",
+        "precio": 2000000,
+        "imagen": "https://www.spectrum.com/content/dam/spectrum/residential/en/mobile/products/PLP-Banner/PLP-Apple-Watch-Ultra-2.jpg"
+    },
+    {
+        "_id": 4,
+        "titulo": "Patinete Eléctrico: Movilidad Inteligente",
+        "descripcion": "Velocidad, estilo y libertad urbana en cada trayecto.",
+        "precio": 6000000,
+        "imagen": "https://assets.jumpseller.com/store/e-mobility/themes/716729/settings/edf10e5e694324346b45/Banner%20Preventa%20KQi300%20Series.jpg?1715805872"
+    },
+    {
+        "_id": 5,
+        "titulo": "Samsung Frame TV: Arte en 4K",
+        "descripcion": "Una obra de arte cuando está apagado, un cine cuando está encendido.",
+        "precio": 4000000,
+        "imagen": "https://decotvframes.com/cdn/shop/files/TLK_017408_TheFrameEvergreen_TVBannerAmazon_1600x.jpg?v=1629288494"
+    },
+    {
+        "_id": 7,
+        "titulo": "Samsung Galaxy S23: Poder en tus Manos",
+        "descripcion": "Fotografía profesional y rendimiento sin igual.",
+        "precio": 3799000,
+        "imagen": "https://i0.wp.com/samlover.com/wp-content/uploads/2023/01/Galaxy-S23-Ultra-2-1.webp"
+    },
+    {
+        "_id": 11,
+        "titulo": "iPhone 15: Innovación a tu Alcance",
+        "descripcion": "El futuro en tus manos con el chip A16 Bionic.",
+        "precio": 3000000,
+        "imagen": "https://img.freepik.com/free-psd/smartphone-camera-control-social-media-banner-design-template_47987-25416.jpg"
+    },
+    {
+        "_id": 12,
+        "titulo": "PC Gamer: Desata tu Potencial",
+        "descripcion": "Gráficos asombrosos y rendimiento imbatible.",
+        "precio": 2200000,
+        "imagen": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gaming-computer-banner-sale-design-template-4eee9f783ef62e0f7122e9ae7828bec1_screen.jpg?ts=1659604125"
+    },
+    {
+        "_id": 14,
+        "titulo": "Lámpara Minimalista: Elegancia Brillante",
+        "descripcion": "Luz cálida para iluminar tu espacio con estilo.",
+        "precio": 18000,
+        "imagen": "https://img.pikbest.com/wp/202350/starry-sky-rendering-night-cityscape-and-combine-in-stunning-3d-rendered-horizon-banner-with-table-lamp-electric-lighting_9785853.jpg!w700wp"
+    },
+    {
+        "_id": 20,
+        "titulo": "Silla Ergonómica: Comodidad Total",
+        "descripcion": "Soporte lumbar y diseño para largas jornadas.",
+        "precio": 4000000,
+        "imagen": "https://cellbell.in/cdn/shop/files/banner_6b2efff2-0db1-4870-b735-7f9360d764c6_1024x1024.jpg?v=1732873805"
+    }
+]

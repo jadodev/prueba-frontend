@@ -5,7 +5,8 @@ type CartState = Record<number, CartItem>;
 
 type CartAction = 
   | { type: 'ADD_PRODUCT'; payload: Product }
-  | { type: 'REMOVE_PRODUCT'; payload: number }; 
+  | { type: 'REMOVE_PRODUCT'; payload: number }
+  | { type: 'DECREASE_PRODUCT_QUANTITY'; payload: number };
 
 const initialState: CartState = {};
 
@@ -35,6 +36,28 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       return rest;
     }
 
+    case 'DECREASE_PRODUCT_QUANTITY': {
+      const productId = action.payload;
+
+      if (!state[productId]) {
+        return state;
+      }
+
+      const newQuantity = state[productId].cantidad - 1;
+      if (newQuantity <= 0) {
+        const { [productId]: _, ...rest } = state;
+        return rest;
+      }
+
+      return {
+        ...state,
+        [productId]: {
+          ...state[productId],
+          cantidad: newQuantity,
+        },
+      };
+    }
+
     default:
       throw new Error(`Acción no soportada: ${action}`);
   }
@@ -44,6 +67,7 @@ interface CartContextProps {
   cart: CartState;
   addProduct: (product: Product) => void;
   removeProduct: (id: number) => void;
+  decreaseProductQuantity: (id: number) => void;
   getProductCount: () => number;
   getTotalPrice: () => number;
 }
@@ -74,6 +98,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     return Object.keys(cart).length;
   };
 
+  const decreaseProductQuantity = (id: number) => {
+    dispatch({ type: 'DECREASE_PRODUCT_QUANTITY', payload: id });
+  };
+
   const getTotalPrice = () => {
     return Object.values(cart).reduce((total, item) => {
       return total + (item.precio * item.cantidad);
@@ -84,7 +112,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       localStorage.setItem('cart', JSON.stringify(cart)); 
   }, [cart]); 
   return (
-    <CartContext.Provider value={{ cart, addProduct, removeProduct, getProductCount, getTotalPrice }}>
+    <CartContext.Provider value={{ cart, addProduct, removeProduct, getProductCount, decreaseProductQuantity, getTotalPrice }}>
       {children}
     </CartContext.Provider>
   );

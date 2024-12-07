@@ -6,6 +6,7 @@ import ProductList from "../components/product/ProductList";
 import { Product } from "../types";
 import { fetchProducts } from "../service/apiService";
 import { Search } from "../components/common/Search";
+import ProductSlider from "../components/common/Swiper/ProductSlider";
 
 const filterProductsByQuery = (products: Product[], query: string): Product[] => {
     if (!query) return products; 
@@ -33,16 +34,19 @@ const Home: React.FC = () => {
   
     const filteredProducts = useMemo(() => filterProductsByQuery(products, searchQuery), [products, searchQuery]);
   
-    return(
-        <IonPage>
-            <Header>
-                <Search searchQuery={searchQuery} onSearchChange={setSearchQuery}/>
-            </Header>
-            <IonContent fullscreen>
-                <ProductList products={filteredProducts}/>
-            </IonContent>
-        </IonPage>
-    )
+    return (
+      <IonPage>
+        <Header>
+          <Search searchQuery={searchQuery} onSearchChange={setSearchQuery} />
+        </Header>
+        <IonContent fullscreen>
+          <h3 className='p-4'>Productos populares</h3>
+          <ProductSlider/>
+          <h3 className='p-4'>Para ti ❤</h3>
+          <ProductList products={filteredProducts}/>
+        </IonContent>
+      </IonPage>
+    );
 }
 
 export default Home;

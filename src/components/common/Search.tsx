@@ -1,5 +1,6 @@
 import React from "react";
 import { IonSearchbar } from "@ionic/react";
+import './Search.css'
 
 interface SearchProps {
   searchQuery: string;
@@ -16,6 +17,7 @@ export const Search: React.FC<SearchProps> = ({ searchQuery, onSearchChange }) =
         debounce={300} 
         placeholder="Buscar productos..."
         showClearButton="focus"
+        className="searchbar"
       />
     </div>
   );

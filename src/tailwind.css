@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --ion-color-primary: #FF6F61;
+    --ion-color-secondary: #4CAF50;
+    --ion-color-light: #F9F9F9;
+    --ion-color-dark: #333333;
+    --ion-color-medium: #757575;
+    --ion-color-warning: #FFD54F;
+    
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: var(--font-primary);
+    background-color: var(--ion-color-light);
+    color: var(--ion-color-dark);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-primary);
+    color: var(--ion-color-dark);
+    margin: 0 0 16px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  
+  h4 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  
+  h5 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--ion-color-dark);
+    margin: 0 0 16px;
+  }
+  
+  span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--ion-color-medium);
+  }
+  
+  hr {
+    height: 1px;
+    background-color: var(--ion-color-medium);
+    border: none;
+    margin: 16px 0;
+  }

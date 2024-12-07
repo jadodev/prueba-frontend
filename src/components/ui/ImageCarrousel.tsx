@@ -64,6 +64,4 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       </button>
     </div>
   );
-  
-  
 };

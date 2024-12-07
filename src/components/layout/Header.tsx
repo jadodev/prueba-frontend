@@ -1,5 +1,5 @@
 import { IonHeader, IonRouterLink, IonToolbar } from "@ionic/react";
-import React, { Children } from "react";
+import React from "react";
 import { useHistory } from "react-router";
 import { useLocation } from "react-router";
 import { Logo } from "../common/Logo";
