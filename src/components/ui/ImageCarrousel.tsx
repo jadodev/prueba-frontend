@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles/carousel.css";
+import "./carousel.css";
 
 interface ImageCarouselProps {
   images: string[];

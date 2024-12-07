@@ -6,6 +6,7 @@ import Home from './pages/Home';
 
 import '@ionic/react/css/core.css';
 import { CartProvider } from './context/CartContext';
+import Checkout from './pages/Checkout';
 
 setupIonicReact();
 
@@ -20,6 +21,11 @@ const App: React.FC = () => (
           exact
           path="/product-info/:productId"
           component={ProductInfo}
+        />
+        <Route
+          exact
+          path="/favorites"
+          component={ Checkout }
         />
         <Route exact path="/">
           <Redirect to="/home" />
