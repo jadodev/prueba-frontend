@@ -1,7 +1,7 @@
 # prueba-tecnica-frontend
 ## Estructura del Proyecto
 
-![Estructura](/public/assets/Captura de pantalla 2024-12-07 013729.png)
+![Estructura](/public/assets/estructura.png)
 
 Este proyecto es una aplicación de tienda en línea construida con **React** e **Ionic**. Permite a los usuarios buscar productos, ver detalles de los productos y gestionar su lista de favoritos. El proyecto sigue patrones de diseño para mejorar la escalabilidad y mantenibilidad del código.
 
