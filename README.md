@@ -4,7 +4,7 @@
 Este proyecto es una aplicación de tienda en línea construida con **React** e **Ionic**. Permite a los usuarios buscar productos, ver detalles de los productos y gestionar su lista de favoritos. El proyecto sigue patrones de diseño para mejorar la escalabilidad y mantenibilidad del código.
 
 ### Descargar el APK
-[Descargar APK](./android/app/build/outputs/apk/debug/app-debug.apk)
+[Descargar APK](https://drive.google.com/file/d/1nwn4TGG0bjshTzitWuTwwVDoVyuWXGDC/view?usp=drive_link)
 ## Instrucciones para instalar la APK
 
 1. Descarga el archivo APK desde el enlace anterior.
