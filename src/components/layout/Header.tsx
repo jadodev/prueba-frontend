@@ -2,8 +2,8 @@ import { IonHeader, IonRouterLink, IonToolbar } from "@ionic/react";
 import React, { Children } from "react";
 import { useHistory } from "react-router";
 import { useLocation } from "react-router";
-import { Logo } from "./common/Logo";
-import { Cart } from "./common/Cart";
+import { Logo } from "../common/Logo";
+import { Cart } from "../Cart";
 
 export const Header: React.FC<{ children: React.ReactNode }> = ({children}) => {
 

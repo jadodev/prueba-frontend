@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState, useMemo } from "react";
 import { IonContent, IonPage } from "@ionic/react";
-import { Header } from "../components/Header";
+import { Header } from "../components/layout/Header";
 import ProductList from "../components/product/ProductList";
 import { Product } from "../types";
 import { fetchProducts } from "../service/apiService";

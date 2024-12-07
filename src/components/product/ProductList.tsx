@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Heart } from '../common/Heart';
-import { ImageWithSkeleton } from './ImageWithSkeleton';
+import { ImageWithSkeleton } from '../ui/ImageWithSkeleton';
 import { Product } from '../../types';
 import { useCart } from '../../hooks/useCart';
 
