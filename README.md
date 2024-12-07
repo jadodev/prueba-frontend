@@ -1,9 +1,16 @@
 # prueba-tecnica-frontend
-## Proyecto de Tienda en Línea
-
 ## Estructura del Proyecto
 
 Este proyecto es una aplicación de tienda en línea construida con **React** e **Ionic**. Permite a los usuarios buscar productos, ver detalles de los productos y gestionar su lista de favoritos. El proyecto sigue patrones de diseño para mejorar la escalabilidad y mantenibilidad del código.
+
+### Descargar el APK
+[Descargar APK](./android/app/build/outputs/apk/debug/app-debug.apk)
+## Instrucciones para instalar la APK
+
+1. Descarga el archivo APK desde el enlace anterior.
+2. Conecta tu dispositivo Android al computador mediante un cable USB.
+3. Asegúrate de tener [ADB](https://developer.android.com/studio/command-line/adb) instalado y configurado en tu sistema.
+4. Abre una terminal y ejecuta el siguiente comando para instalar la APK:
 
 ## Patrones de Diseño Implementados
 
