@@ -1,13 +1,18 @@
 import React from "react";
 import { Product } from "../../types";
+import { Heart } from "../common/Heart";
+import { useCart } from "../../hooks/useCart";
 
 
 interface ProductDetailsProps {
   product: Product;
-  productId: string;
+  productId: number;
 }
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({ product, productId }) => {
+
+  const { addProduct, removeProduct } = useCart()
+
   return (
     <div className="flex flex-col justify-center md:gap-y-2  lg:w-3/5 md:mx-auto md:px-8 md:py-8">
       <h2 className="text-2xl md:text-5xl font-semibold">{product.titulo}</h2>
@@ -15,6 +20,11 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product, product
       <p className="mt-4 md:text-2xl">{product.descripcion}</p>
       <button className="mr-auto flex items-center rounded-full justify-center mt-10 px-8 ml-auto gap-x-4 relative">
         <div className="flex items-center relative">
+        <Heart 
+            product={product}
+            removeProduct={removeProduct}
+            addProduct={addProduct}
+          />
         </div>
         <span className="flex text-center items-center text-base md:text-2xl ">Agregar a Favoritos</span>
       </button>

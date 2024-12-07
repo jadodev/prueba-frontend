@@ -4,24 +4,24 @@ import './heart.css';
 
 type HeartProps = {
   product: Product;
-  addProduct: (product: Product) => void; // Método para agregar producto
-  removeProduct: (id: number) => void; // Método para eliminar producto
+  addProduct: (product: Product) => void;
+  removeProduct: (id: number) => void; 
 };
 
 export const Heart: React.FC<HeartProps> = ({ product, addProduct, removeProduct }) => {
-  const [isLiked, setIsLiked] = useState(false); // Estado para el ícono
-  const [isAnimating, setIsAnimating] = useState(false); // Estado para animación
+  const [isLiked, setIsLiked] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = () => {
     if (isLiked) {
       console.log("Removed")
-      removeProduct(product._id); // Llama al método de eliminación
-      setIsLiked(false); // Cambia el estado a inactivo
+      removeProduct(product._id); 
+      setIsLiked(false);
     } else {
-      addProduct(product); // Llama al método de adición
-      setIsLiked(true); // Cambia el estado a activo
-      setIsAnimating(true); // Activa la animación
-      setTimeout(() => setIsAnimating(false), 1000); // Desactiva animación después de 1s
+      addProduct(product);
+      setIsLiked(true);
+      setIsAnimating(true);
+      setTimeout(() => setIsAnimating(false), 1000);
     }
   };
 
@@ -33,5 +33,3 @@ export const Heart: React.FC<HeartProps> = ({ product, addProduct, removeProduct
     </div>
   );
 };
-
-// en pantallas medianas y pequenias el corazon ocupa mucho espacio en el producto (el icono esta muy pequenio) 

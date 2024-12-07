@@ -17,7 +17,7 @@ const formatPrice = (price: number): string => {
 };
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
-  const { addProduct, removeProduct, getProductCount } = useCart();
+  const { addProduct, removeProduct } = useCart();
   const history = useHistory();
 
   const handleClick = (productId: number) => ( event: React.MouseEvent<HTMLDivElement, MouseEvent> ) => {

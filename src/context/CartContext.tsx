@@ -54,7 +54,6 @@ interface CartProviderProps {
 }
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-  // Recuperar el estado inicial del carrito desde localStorage, si existe
   const loadCartFromStorage = (): CartState => {
     const storedCart = localStorage.getItem('cart');
     return storedCart ? JSON.parse(storedCart) : initialState;
