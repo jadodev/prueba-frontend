@@ -1,9 +1,9 @@
 # prueba-tecnica-frontend
 
 #### Videos de la funcionalidad de la app.
-![Mobile](prueba-tecnica/public/assets/prueba-mobile.mp4)
+![Mobile](https://github.com/jadodev/prueba-frontend/blob/main/public/assets/prueba-mobile.mp4)
 
-![Navegador](prueba-tecnica/public/assets/prueba-navegador.mp4)
+![Navegador](https://github.com/jadodev/prueba-frontend/blob/main/public/assets/prueba-navegador.mp4)
 
 ## Estructura del Proyecto
 
